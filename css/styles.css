@@ -1,3 +1,4 @@
+/*universal selector: including content*/
 *,
 *::before{
     margin:1px;
@@ -12,7 +13,7 @@
 body{
     font-family: 'Lato', sans-serif;   
 }
-
+    /*Content position and size*/
     .stripes_container{
         display:flex;
         flex-flow:row nowrap;   
@@ -21,7 +22,7 @@ body{
         line-height: 1.5;
         min-height: 100vh;
     }
-
+        /*Stripes position, size and overflow (all the elements out the stripe will be hidden)*/
         .stripes_content{
             display:flex;
             justify-content:center; 
@@ -30,7 +31,7 @@ body{
             overflow: hidden;
             width:20%;   
         }
-
+            /* Letters position and color with Flex*/
             .stripes_block{
                 display:flex;
                 justify-content: center;
@@ -40,7 +41,7 @@ body{
                 min-height: 100vh;         
             }
 
-                /* COLOR STRIPES BACKGROUND WITH PSEUDOCLASS CHILD */
+                /* COLOR STRIPES WITH PSEUDOCLASS CHILD: Position and color */
 
                 .stripes_content:nth-child(1) {
                     left: 0;
@@ -77,8 +78,7 @@ body{
                     background-color:#F24B4B;
                 }
 
-                /* COLOR STRIPES BACKGROUND OPACITY */
-
+                /* Stripes opacity and animation*/
                 .stripes_block::before{
                     content: "";
                     position: absolute;
@@ -95,7 +95,7 @@ body{
                             transform: skew(30deg) scaleY(1) translate(0, 0);
                     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
                 }
-
+                
                 .stripes_block:hover::before {
                     opacity: 0.1;
                     -webkit-transform: skew(0deg) scaleY(1) translate(0, 0);
