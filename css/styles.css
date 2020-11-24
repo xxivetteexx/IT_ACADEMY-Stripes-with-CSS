@@ -1,4 +1,5 @@
-*{
+*,
+*::before{
     margin:1px;
     padding:0px;
     box-sizing:border-box;
@@ -9,14 +10,13 @@
 }
 
 body{
-        font-family: 'Lato', sans-serif;   
+    font-family: 'Lato', sans-serif;   
 }
 
     .stripes_container{
         display:flex;
         flex-flow:row nowrap;   
         justify-content:center;   
-        color:black;
         font-size:1.6rem;
         line-height: 1.5;
         min-height: 100vh;
@@ -26,8 +26,7 @@ body{
             display:flex;
             justify-content:center; 
             width:20%;
-            min-height: 100vh;
-            overflow: hidden;        
+            min-height: 100vh;   
         }
 
             .stripes_block{
@@ -44,7 +43,7 @@ body{
                     left: 0;
                 }
                 .stripes_content .stripes_block:nth-child(1){
-                    background-color: #244F75;
+                    background-color: #244F75; 
                 }
 
                 .stripes_content:nth-child(2) {
