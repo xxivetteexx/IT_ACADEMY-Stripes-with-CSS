@@ -2,79 +2,101 @@
     margin:1px;
     padding:0px;
     box-sizing:border-box;
-
+  
     /* Amb això ens asegurem que funciona per tots els navegadors */
     -webkit-box-sizing:border-box;
     -moz-box-sizing:border-box;
 }
 
-.stripes_container{
-    display:flex;
-    flex-flow:row nowrap;   
-    justify-content:center;  
-    color:black;
-    font-size:2rem;
-    line-height: 1.5;
-    min-height: 100vh;
+body{
+        font-family: 'Lato', sans-serif;   
 }
 
-
-    .stripes_content{
+    .stripes_container{
         display:flex;
-        justify-content:center;
-        width:20%;
+        flex-flow:row nowrap;   
+        justify-content:center;   
+        color:black;
+        font-size:1.6rem;
+        line-height: 1.5;
         min-height: 100vh;
-        /* position: absolute;
-        overflow: hidden; */
     }
 
-        .stripes_block{
+        .stripes_content{
             display:flex;
-            justify-content: center;
-            align-items: center;
-            width:100%;
-            color:white;
-           
+            justify-content:center; 
+            width:20%;
+            min-height: 100vh;
+            overflow: hidden;        
         }
 
-            /* COLOR STRIPES BACKGROUND WITH PSEUDOCLASS CHILD */
-            .stripes_content .stripes_block:nth-child(1){
-                background-color: #244F75;
+            .stripes_block{
+                display:flex;
+                justify-content: center;
+                align-items: center; 
+                width:100%;
+                color:white;           
             }
 
-            .stripes_content:nth-child(2) .stripes_block{
-                background: #60BFBF;
-            }
+                /* COLOR STRIPES BACKGROUND WITH PSEUDOCLASS CHILD */
 
-            .stripes_content:nth-child(3) .stripes_block{
-                background-color:#8C4B7E;
-            }
+                .stripes_content:nth-child(1) {
+                    left: 0;
+                }
+                .stripes_content .stripes_block:nth-child(1){
+                    background-color: #244F75;
+                }
 
-            .stripes_content:nth-child(4) .stripes_block{
-                background-color:#F8BB44;
-            }
+                .stripes_content:nth-child(2) {
+                    left: 20vw;
+                }
+                .stripes_content:nth-child(2) .stripes_block{
+                    background: #60BFBF;
+                }
 
-            .stripes_content:nth-child(5) .stripes_block{
-                background-color:#F24B4B;
-            }
+                .stripes_content:nth-child(2) {
+                    left: 40vw;
+                }
+                .stripes_content:nth-child(3) .stripes_block{
+                    background-color:#8C4B7E;
+                }
 
-             /* COLOR STRIPES BACKGROUND OPACITY */
+                .stripes_content:nth-child(2) {
+                    left: 60vw;
+                }
+                .stripes_content:nth-child(4) .stripes_block{
+                    background-color:#F8BB44;
+                }
 
-            .stripes_block::before{
-                content: "";
-                position: absolute;
-                z-index: 1;
-                top: 0;
-                left: 0;
-                width: 20%;
-                height: 100%;
-                background: white;
-                opacity: 0.05;
-                -webkit-transform-origin: center center;
-                        transform-origin: center center;
-                -webkit-transform: skew(30deg) scaleY(1) translate(0, 0);
-                        transform: skew(30deg) scaleY(1) translate(0, 0);
-                transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-            }
+                .stripes_content:nth-child(2) {
+                    left: 80vw;
+                }
+                .stripes_content:nth-child(5) .stripes_block{
+                    background-color:#F24B4B;
+                }
+
+                /* COLOR STRIPES BACKGROUND OPACITY */
+
+                .stripes_block::before{
+                    content: "";
+                    position: absolute;
+                    z-index: 1;
+                    top: 0;
+                    width: 20%;
+                    height: 100%;
+                    background: #fff;
+                    opacity: 0.05;
+                    -webkit-transform-origin: center center;
+                            transform-origin: center center;
+                    -webkit-transform: skew(30deg) scaleY(1) translate(0, 0);
+                            transform: skew(30deg) scaleY(1) translate(0, 0);
+                    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+                }
+
+                .stripes_block:hover::before {
+                    opacity: 0.1;
+                    -webkit-transform: skew(0deg) scaleY(1) translate(0, 0);
+                            transform: skew(0deg) scaleY(1) translate(0, 0);
+                  }
 
 
