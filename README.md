@@ -28,7 +28,7 @@ We will use the function: Skew
 
 Animate the white stripe with an opacity of 0.1 when you place the mouse over an element.
 
-## Tools 🛠️
+## Build with 🛠️
 * HTML5
 * CSS
 * Sass
